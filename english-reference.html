@@ -1,0 +1,1120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ultimate 9th Grade English Master Guide</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        body {
+            font-family: 'Georgia', serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: #2d3748;
+            line-height: 1.6;
+            padding: 20px;
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            background: rgba(255, 255, 255, 0.98);
+            border-radius: 20px;
+            padding: 40px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+        }
+
+        h1 {
+            text-align: center;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            font-size: 3em;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+
+        .subtitle {
+            text-align: center;
+            color: #718096;
+            font-style: italic;
+            margin-bottom: 30px;
+            font-size: 1.2em;
+        }
+
+        .tabs {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-bottom: 30px;
+            border-bottom: 3px solid #e2e8f0;
+            padding-bottom: 10px;
+        }
+
+        .tab {
+            padding: 12px 20px;
+            background: #f7fafc;
+            border: none;
+            border-radius: 10px 10px 0 0;
+            cursor: pointer;
+            transition: all 0.3s;
+            font-weight: 600;
+            color: #4a5568;
+            font-size: 0.9em;
+        }
+
+        .tab:hover {
+            background: #e6fffa;
+            transform: translateY(-2px);
+        }
+
+        .tab.active {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(102, 126, 234, 0.4);
+        }
+
+        .content {
+            display: none;
+            animation: fade 0.5s;
+        }
+
+        .content.active { display: block; }
+
+        @keyframes fade {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .section {
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            margin-bottom: 30px;
+        }
+
+        h2 {
+            color: #764ba2;
+            font-size: 2em;
+            margin-bottom: 20px;
+            border-bottom: 3px solid #667eea;
+            padding-bottom: 10px;
+        }
+
+        h3 {
+            color: #5a67d8;
+            font-size: 1.4em;
+            margin: 20px 0 12px;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+            margin: 20px 0;
+        }
+
+        .card {
+            background: linear-gradient(135deg, #f6f8fb 0%, #e9ecf5 100%);
+            padding: 20px;
+            border-radius: 12px;
+            border-left: 4px solid #667eea;
+            transition: all 0.3s;
+        }
+
+        .card:hover {
+            border-left-width: 8px;
+            transform: translateX(5px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+        }
+
+        .card-title {
+            font-weight: bold;
+            color: #5a67d8;
+            font-size: 1.15em;
+            margin-bottom: 10px;
+        }
+
+        .card-desc {
+            color: #4a5568;
+            margin-bottom: 10px;
+        }
+
+        .card-ex {
+            font-style: italic;
+            color: #718096;
+            font-size: 0.95em;
+            padding: 12px;
+            background: white;
+            border-radius: 8px;
+            margin-top: 10px;
+        }
+
+        .box {
+            padding: 20px;
+            border-radius: 12px;
+            margin: 20px 0;
+            border-left: 5px solid;
+        }
+
+        .box.blue { background: linear-gradient(135deg, #ebf8ff 0%, #bee3f8 100%); border-color: #4299e1; }
+        .box.green { background: linear-gradient(135deg, #f0fff4 0%, #c6f6d5 100%); border-color: #48bb78; }
+        .box.yellow { background: linear-gradient(135deg, #fef5e7 0%, #fdebd0 100%); border-color: #f39c12; }
+        .box.purple { background: linear-gradient(135deg, #faf5ff 0%, #e9d8fd 100%); border-color: #9f7aea; }
+        .box.red { background: linear-gradient(135deg, #fff5f5 0%, #fed7d7 100%); border-color: #f56565; }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+
+        th {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 15px;
+            text-align: left;
+        }
+
+        td {
+            padding: 15px;
+            border: 1px solid #e2e8f0;
+        }
+
+        tr:nth-child(even) { background: #f7fafc; }
+        td:first-child { font-weight: bold; color: #5a67d8; width: 30%; }
+
+        .formula {
+            background: #f0fff4;
+            padding: 20px;
+            border-radius: 12px;
+            border: 3px solid #48bb78;
+            font-size: 1.1em;
+            text-align: center;
+            font-weight: bold;
+            color: #276749;
+            margin: 15px 0;
+        }
+
+        ul { padding-left: 25px; margin: 15px 0; }
+        li { margin: 8px 0; }
+
+        code {
+            background: #f7fafc;
+            padding: 2px 8px;
+            border-radius: 4px;
+            font-family: monospace;
+            color: #d63384;
+        }
+
+        @media (max-width: 768px) {
+            .container { padding: 20px; }
+            h1 { font-size: 2em; }
+            .tabs { justify-content: center; }
+        }
+  </style>
+</head>
+<body>
+    <p style="margin-bottom:15px;">
+        <a href="index.html" style="color:#edf2ff; font-weight:bold; text-decoration:none;">
+            ← Back to Home
+        </a>
+    </p>
+
+    <div class="container">
+        <h1>📚 THE ULTIMATE 9TH GRADE ENGLISH MASTER GUIDE 📚</h1>
+
+        <div class="tabs">
+            <button class="tab" data-tab="0">📖 Literary Devices</button>
+            <button class="tab" data-tab="1">🎭 Elements & Themes</button>
+            <button class="tab" data-tab="2">💬 Evidence & Citations</button>
+            <button class="tab" data-tab="3">✍️ Essay Writing</button>
+            <button class="tab" data-tab="4">📝 Grammar Rules</button>
+            <button class="tab" data-tab="5">💡 Vocabulary & Style</button>
+            <button class="tab" data-tab="6">🎨 Poetry Guide</button>
+            <button class="tab" data-tab="7">🔍 Reading Skills</button>
+        </div>
+
+        <!-- TAB 0: LITERARY DEVICES -->
+        <div class="content" data-content="0">
+            <div class="section">
+                <h2>✨ Literary Devices - Complete Reference</h2>
+                
+                <h3>Figurative Language</h3>
+                <div class="grid">
+                    <div class="card">
+                        <div class="card-title">Metaphor</div>
+                        <div class="card-desc">Direct comparison without "like" or "as"</div>
+                        <div class="card-ex">"Time is a thief stealing moments"</div>
+                    </div>
+                    <div class="card">
+                        <div class="card-title">Simile</div>
+                        <div class="card-desc">Comparison using "like" or "as"</div>
+                        <div class="card-ex">"Her smile was as bright as the sun"</div>
+                    </div>
+                    <div class="card">
+                        <div class="card-title">Personification</div>
+                        <div class="card-desc">Giving human qualities to non-human things</div>
+                        <div class="card-ex">"The wind whispered secrets"</div>
+                    </div>
+                    <div class="card">
+                        <div class="card-title">Hyperbole</div>
+                        <div class="card-desc">Extreme exaggeration for emphasis</div>
+                        <div class="card-ex">"I've told you a million times!"</div>
+                    </div>
+                    <div class="card">
+                        <div class="card-title">Idiom</div>
+                        <div class="card-desc">Phrase with non-literal meaning</div>
+                        <div class="card-ex">"It's raining cats and dogs"</div>
+                    </div>
+                    <div class="card">
+                        <div class="card-title">Oxymoron</div>
+                        <div class="card-desc">Contradictory terms together</div>
+                        <div class="card-ex">"Deafening silence," "jumbo shrimp"</div>
+                    </div>
+                </div>
+
+                <h3>Sound Devices</h3>
+                <div class="grid">
+                    <div class="card">
+                        <div class="card-title">Alliteration</div>
+                        <div class="card-desc">Repetition of consonant sounds at start</div>
+                        <div class="card-ex">"Peter Piper picked a peck"</div>
+                    </div>
+                    <div class="card">
+                        <div class="card-title">Assonance</div>
+                        <div class="card-desc">Repetition of vowel sounds within words</div>
+                        <div class="card-ex">"The rain in Spain"</div>
+                    </div>
+                    <div class="card">
+                        <div class="card-title">Consonance</div>
+                        <div class="card-desc">Repetition of consonant sounds within/end</div>
+                        <div class="card-ex">"Pitter patter," "blank and think"</div>
+                    </div>
+                    <div class="card">
+                        <div class="card-title">Onomatopoeia</div>
+                        <div class="card-desc">Words that imitate sounds</div>
+                        <div class="card-ex">buzz, crash, sizzle, meow, bang</div>
+                    </div>
+                    <div class="card">
+                        <div class="card-title">Rhythm/Meter</div>
+                        <div class="card-desc">Pattern of stressed/unstressed syllables</div>
+                        <div class="card-ex">Iambic pentameter: da-DUM pattern</div>
+                    </div>
+                    <div class="card">
+                        <div class="card-title">Rhyme</div>
+                        <div class="card-desc">Repetition of sounds at line ends</div>
+                        <div class="card-ex">End rhyme (AABB), internal, slant</div>
+                    </div>
+                </div>
+
+                <h3>Narrative & Structural</h3>
+                <div class="grid">
+                    <div class="card">
+                        <div class="card-title">Foreshadowing</div>
+                        <div class="card-desc">Hints about future events</div>
+                        <div class="card-ex">Dark clouds before tragedy</div>
+                    </div>
+                    <div class="card">
+                        <div class="card-title">Flashback</div>
+                        <div class="card-desc">Scene showing past events</div>
+                        <div class="card-ex">Character remembering childhood</div>
+                    </div>
+                    <div class="card">
+                        <div class="card-title">Symbolism</div>
+                        <div class="card-desc">Object representing deeper meaning</div>
+                        <div class="card-ex">Dove = peace; green light = dreams</div>
+                    </div>
+                    <div class="card">
+                        <div class="card-title">Allegory</div>
+                        <div class="card-desc">Story with dual literal/symbolic meaning</div>
+                        <div class="card-ex">Animal Farm = Russian Revolution</div>
+                    </div>
+                    <div class="card">
+                        <div class="card-title">Allusion</div>
+                        <div class="card-desc">Reference to another work/person/event</div>
+                        <div class="card-ex">"He's a Romeo" (Shakespeare)</div>
+                    </div>
+                    <div class="card">
+                        <div class="card-title">Motif</div>
+                        <div class="card-desc">Recurring element with symbolic meaning</div>
+                        <div class="card-ex">Blood in Macbeth, eyes in Gatsby</div>
+                    </div>
+                </div>
+
+                <h3>Irony Types</h3>
+                <div class="grid">
+                    <div class="card">
+                        <div class="card-title">Verbal Irony</div>
+                        <div class="card-desc">Saying opposite of what you mean</div>
+                        <div class="card-ex">"Great weather!" during storm</div>
+                    </div>
+                    <div class="card">
+                        <div class="card-title">Situational Irony</div>
+                        <div class="card-desc">Opposite of expected happens</div>
+                        <div class="card-ex">Fire station burns down</div>
+                    </div>
+                    <div class="card">
+                        <div class="card-title">Dramatic Irony</div>
+                        <div class="card-desc">Audience knows more than characters</div>
+                        <div class="card-ex">We know Juliet's alive, Romeo doesn't</div>
+                    </div>
+                    <div class="card">
+                        <div class="card-title">Paradox</div>
+                        <div class="card-desc">Contradictory statement revealing truth</div>
+                        <div class="card-ex">"Less is more"</div>
+                    </div>
+                    <div class="card">
+                        <div class="card-title">Juxtaposition</div>
+                        <div class="card-desc">Contrasting elements side by side</div>
+                        <div class="card-ex">Wealth and poverty in same scene</div>
+                    </div>
+                </div>
+
+                <h3>Rhetorical Appeals</h3>
+                <div class="grid">
+                    <div class="card">
+                        <div class="card-title">Ethos</div>
+                        <div class="card-desc">Appeal to credibility/ethics</div>
+                        <div class="card-ex">"As a doctor with 20 years..."</div>
+                    </div>
+                    <div class="card">
+                        <div class="card-title">Pathos</div>
+                        <div class="card-desc">Appeal to emotions</div>
+                        <div class="card-ex">Using sad stories for sympathy</div>
+                    </div>
+                    <div class="card">
+                        <div class="card-title">Logos</div>
+                        <div class="card-desc">Appeal to logic/reason</div>
+                        <div class="card-ex">Using statistics and facts</div>
+                    </div>
+                    <div class="card">
+                        <div class="card-title">Repetition</div>
+                        <div class="card-desc">Repeating words/phrases for emphasis</div>
+                        <div class="card-ex">"I have a dream..." (MLK)</div>
+                    </div>
+                    <div class="card">
+                        <div class="card-title">Rhetorical Question</div>
+                        <div class="card-desc">Question for effect, no answer expected</div>
+                        <div class="card-ex">"Who doesn't want success?"</div>
+                    </div>
+                    <div class="card">
+                        <div class="card-title">Parallelism</div>
+                        <div class="card-desc">Similar grammatical structure repeated</div>
+                        <div class="card-ex">"I came, I saw, I conquered"</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- TAB 1: ELEMENTS & THEMES -->
+        <div class="content" data-content="1">
+            <div class="section">
+                <h2>🎭 Literary Elements & Story Components</h2>
+
+                <h3>Plot Structure</h3>
+                <div class="formula">Exposition → Rising Action → Climax → Falling Action → Resolution</div>
+                <div class="box purple">
+                    <ul>
+                        <li><strong>Exposition:</strong> Introduction of characters, setting, basic situation</li>
+                        <li><strong>Rising Action:</strong> Complications develop; tension builds</li>
+                        <li><strong>Climax:</strong> Turning point; most intense moment</li>
+                        <li><strong>Falling Action:</strong> Events after climax; conflicts resolving</li>
+                        <li><strong>Resolution:</strong> Conclusion; loose ends tied</li>
+                    </ul>
+                </div>
+
+                <h3>Setting Components</h3>
+                <table>
+                    <tr><th>Element</th><th>Description</th></tr>
+                    <tr><td>Time</td><td>Historical period, season, time of day, duration</td></tr>
+                    <tr><td>Place</td><td>Geographic location, specific sites</td></tr>
+                    <tr><td>Social Context</td><td>Cultural, political, social conditions</td></tr>
+                    <tr><td>Atmosphere</td><td>Mood/feeling the setting creates</td></tr>
+                </table>
+
+                <h3>Character Types</h3>
+                <div class="grid">
+                    <div class="card">
+                        <div class="card-title">Protagonist</div>
+                        <div class="card-desc">Main character; story centers on them</div>
+                    </div>
+                    <div class="card">
+                        <div class="card-title">Antagonist</div>
+                        <div class="card-desc">Opposes protagonist; creates conflict</div>
+                    </div>
+                    <div class="card">
+                        <div class="card-title">Dynamic</div>
+                        <div class="card-desc">Changes/grows throughout story</div>
+                    </div>
+                    <div class="card">
+                        <div class="card-title">Static</div>
+                        <div class="card-desc">Stays the same; no change</div>
+                    </div>
+                    <div class="card">
+                        <div class="card-title">Round</div>
+                        <div class="card-desc">Complex, realistic, well-developed</div>
+                    </div>
+                    <div class="card">
+                        <div class="card-title">Flat</div>
+                        <div class="card-desc">Simple, one-dimensional, stereotypical</div>
+                    </div>
+                    <div class="card">
+                        <div class="card-title">Foil</div>
+                        <div class="card-desc">Contrasts with another character</div>
+                    </div>
+                    <div class="card">
+                        <div class="card-title">Confidant</div>
+                        <div class="card-desc">Trusted friend protagonist confides in</div>
+                    </div>
+                </div>
+
+                <h3>STEAL Method - Indirect Characterization</h3>
+                <div class="box green">
+                    <ul>
+                        <li><strong>S</strong>peech - What character says and how they say it</li>
+                        <li><strong>T</strong>houghts - Internal thoughts and feelings</li>
+                        <li><strong>E</strong>ffect on others - How other characters react</li>
+                        <li><strong>A</strong>ctions - What the character does</li>
+                        <li><strong>L</strong>ooks - Physical appearance and presentation</li>
+                    </ul>
+                </div>
+
+                <h3>Types of Conflict</h3>
+                <div class="grid">
+                    <div class="card">
+                        <div class="card-title">Person vs. Person</div>
+                        <div class="card-desc">Character vs. another character</div>
+                        <div class="card-ex">Harry vs. Voldemort</div>
+                    </div>
+                    <div class="card">
+                        <div class="card-title">Person vs. Self</div>
+                        <div class="card-desc">Internal struggle, moral dilemmas</div>
+                        <div class="card-ex">Hamlet's indecision</div>
+                    </div>
+                    <div class="card">
+                        <div class="card-title">Person vs. Nature</div>
+                        <div class="card-desc">Against natural forces/environment</div>
+                        <div class="card-ex">Survival stories, disasters</div>
+                    </div>
+                    <div class="card">
+                        <div class="card-title">Person vs. Society</div>
+                        <div class="card-desc">Against social norms, laws, traditions</div>
+                        <div class="card-ex">Hunger Games, civil rights</div>
+                    </div>
+                    <div class="card">
+                        <div class="card-title">Person vs. Technology</div>
+                        <div class="card-desc">Against machines, AI, science</div>
+                        <div class="card-ex">Terminator, I Robot</div>
+                    </div>
+                    <div class="card">
+                        <div class="card-title">Person vs. Fate</div>
+                        <div class="card-desc">Against destiny, gods, supernatural</div>
+                        <div class="card-ex">Greek tragedies, prophecies</div>
+                    </div>
+                </div>
+
+                <h3>Point of View</h3>
+                <table>
+                    <tr><th>POV Type</th><th>Description & Pronouns</th></tr>
+                    <tr><td>First Person</td><td>Narrator is a character; uses "I" and "we"</td></tr>
+                    <tr><td>Second Person</td><td>Addresses reader directly; uses "you" (rare)</td></tr>
+                    <tr><td>Third Limited</td><td>Outside narrator; knows ONE character's thoughts; "he/she/they"</td></tr>
+                    <tr><td>Third Omniscient</td><td>All-knowing; knows ALL characters' thoughts</td></tr>
+                    <tr><td>Third Objective</td><td>Reports only observable actions; no thoughts</td></tr>
+                </table>
+
+                <h3>Universal Themes</h3>
+                <div class="grid">
+                    <div class="card">
+                        <div class="card-title">Coming of Age</div>
+                        <div class="card-desc">Childhood to adulthood; loss of innocence; self-discovery</div>
+                    </div>
+                    <div class="card">
+                        <div class="card-title">Good vs. Evil</div>
+                        <div class="card-desc">Moral struggles; ethical choices; consequences</div>
+                    </div>
+                    <div class="card">
+                        <div class="card-title">Power & Corruption</div>
+                        <div class="card-desc">How power affects people; abuse of authority</div>
+                    </div>
+                    <div class="card">
+                        <div class="card-title">Love & Sacrifice</div>
+                        <div class="card-desc">Different forms of love; giving up for others</div>
+                    </div>
+                    <div class="card">
+                        <div class="card-title">Death & Mortality</div>
+                        <div class="card-desc">Facing death; meaning of life; grief</div>
+                    </div>
+                    <div class="card">
+                        <div class="card-title">Identity & Self</div>
+                        <div class="card-desc">Who am I?; belonging; finding place</div>
+                    </div>
+                    <div class="card">
+                        <div class="card-title">Justice & Injustice</div>
+                        <div class="card-desc">Fairness; prejudice; standing up</div>
+                    </div>
+                    <div class="card">
+                        <div class="card-title">Individual vs. Society</div>
+                        <div class="card-desc">Conformity vs. rebellion; expectations</div>
+                    </div>
+                    <div class="card">
+                        <div class="card-title">Survival</div>
+                        <div class="card-desc">Physical/emotional endurance; resilience</div>
+                    </div>
+                    <div class="card">
+                        <div class="card-title">Freedom & Oppression</div>
+                        <div class="card-desc">Fighting for liberty; breaking free</div>
+                    </div>
+                    <div class="card">
+                        <div class="card-title">Family & Loyalty</div>
+                        <div class="card-desc">Family bonds; betrayal; duty vs. desire</div>
+                    </div>
+                    <div class="card">
+                        <div class="card-title">American Dream</div>
+                        <div class="card-desc">Success; prosperity; disillusionment</div>
+                    </div>
+                </div>
+
+                <h3>Tone vs. Mood</h3>
+                <div class="grid">
+                    <div class="card">
+                        <div class="card-title">TONE (Author's Attitude)</div>
+                        <div class="card-desc">How the AUTHOR feels about subject</div>
+                        <div class="card-ex">Optimistic, sarcastic, serious, critical, nostalgic, humorous, sympathetic, bitter, formal, playful</div>
+                    </div>
+                    <div class="card">
+                        <div class="card-title">MOOD (Reader's Feeling)</div>
+                        <div class="card-desc">How it makes YOU feel as reader</div>
+                        <div class="card-ex">Cheerful, tense, eerie, melancholic, suspenseful, peaceful, ominous, joyful, gloomy, romantic</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- TAB 2: EVIDENCE & CITATIONS -->
+        <div class="content" data-content="2">
+            <div class="section">
+                <h2>💬 Integrating Evidence & Proper Citations</h2>
+
+                <div class="formula">CLAIM → TRANSITION → EVIDENCE → CITATION → ANALYSIS</div>
+
+                <h3>Transition Words for Introducing Evidence</h3>
+                <div class="box yellow">
+                    <strong>To introduce quotes:</strong><br>
+                    • According to the text, "..."<br>
+                    • The author illustrates this when...<br>
+                    • For example, the narrator states, "..."<br>
+                    • This is evident when...<br>
+                    • As shown in the passage, "..."<br>
+                    • The text reveals that "..."<br><br>
+
+                    <strong>To add evidence:</strong><br>
+                    • Furthermore, "..."<br>
+                    • Additionally, the author notes, "..."<br>
+                    • Moreover, "..."<br>
+                    • Similarly, "..."<br>
+                    • Likewise, "..."<br><br>
+
+                    <strong>To show contrast:</strong><br>
+                    • However, "..."<br>
+                    • On the other hand, "..."<br>
+                    • Conversely, "..."<br>
+                    • In contrast, "..."<br>
+                    • Despite this, "..."
+                </div>
+
+                <h3>MLA Citation Formats</h3>
+                <div class="box green">
+                    <strong>For novels/books:</strong><br>
+                    <code>The protagonist realizes, "I had been blind" (Smith 45).</code><br><br>
+
+                    <strong>For plays:</strong><br>
+                    <code>Juliet declares, "What's in a name?" (Shakespeare 2.2.43).</code><br><br>
+
+                    <strong>For poems:</strong><br>
+                    <code>The speaker describes "two roads diverged" (Frost lines 1-2).</code><br><br>
+
+                    <strong>For short stories:</strong><br>
+                    <code>The narrator admits, "I could not stop" (Poe 7).</code>
+                </div>
+
+                <h3>Three Methods of Evidence Integration</h3>
+
+                <div class="box blue">
+                    <strong>1. DIRECT QUOTE (use sparingly - most powerful words only)</strong><br>
+                    The author emphasizes determination when she states, "I will not give up, no matter the cost" (Jones 89). This powerful declaration reveals her unwavering commitment.
+                </div>
+
+                <div class="box purple">
+                    <strong>2. PARAPHRASE (use frequently - restate in your words)</strong><br>
+                    The protagonist demonstrates courage by refusing to abandon her mission despite overwhelming obstacles (Jones 89). This persistence highlights her strength.
+                </div>
+
+                <div class="box yellow">
+                    <strong>3. SUMMARY (for broader points - condense larger sections)</strong><br>
+                    Throughout the novel, the main character faces numerous challenges that test her resolve (Jones 85-92). These experiences shape her into a stronger person.
+                </div>
+
+                <h3>The Quote Sandwich</h3>
+                <div class="box blue">
+                    <ul>
+                        <li><strong>Top bun – Introduce:</strong> Give context + speaker.  
+                            <br><em>When Jonas first sees color for the first time, he realizes the truth about his community.</em></li>
+                        <li><strong>Meat – Quote with citation:</strong> Use only the key words and cite correctly.  
+                            <br><em>He notices that the apple "changed, just for an instant" (Lowry 24).</em></li>
+                        <li><strong>Bottom bun – Explain:</strong> Connect the quote back to your claim.  
+                            <br><em>This shift shows his growing awareness that his world is not as perfect as it seems.</em></li>
+                    </ul>
+                </div>
+
+                <h3>Avoiding “Dropped Quotes”</h3>
+                <div class="box red">
+                    <strong>❌ Wrong:</strong> <code>"I had never seen the sea before" (Diaz 3).</code><br>
+                    (The quote is just dropped in with no explanation.)<br><br>
+                    <strong>✅ Better:</strong>  
+                    <code>When the narrator finally reaches the coast, he admits, "I had never seen the sea before" (Diaz 3), revealing how small and isolated his world has been.</code>
+                </div>
+
+                <h3>Signal Verbs Upgrade</h3>
+                <table>
+                    <tr><th>Basic Verb</th><th>Stronger Alternatives</th></tr>
+                    <tr><td>says</td><td>states, claims, argues, asserts, explains, suggests</td></tr>
+                    <tr><td>shows</td><td>illustrates, reveals, demonstrates, emphasizes, highlights</td></tr>
+                    <tr><td>thinks</td><td>believes, reflects, wonders, considers, questions</td></tr>
+                    <tr><td>feels</td><td>admits, confesses, laments, celebrates, complains</td></tr>
+                </table>
+
+                <h3>Analysis Sentence Starters</h3>
+                <div class="box green">
+                    • This reveals that...<br>
+                    • This suggests that...<br>
+                    • This demonstrates how...<br>
+                    • This highlights the idea that...<br>
+                    • This implies that...<br>
+                    • As a result, the reader understands that...<br>
+                    • Ultimately, this shows that...
+                </div>
+
+                <h3>Common Citation Mistakes to Avoid</h3>
+                <ul>
+                    <li>Putting a period <em>before</em> the parenthesis → correct is <code>"quote" (Author 12).</code></li>
+                    <li>Including <code>p.</code> or <code>pg.</code> → MLA uses just the number.</li>
+                    <li>Using the full URL in the paragraph → save that for the Works Cited page.</li>
+                    <li>Using long block quotes when a short, targeted quote is better.</li>
+                    <li>Forgetting to explain how the quote connects to your claim.</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- TAB 3: ESSAY WRITING -->
+        <div class="content" data-content="3">
+            <div class="section">
+                <h2>✍️ Essay Writing & Paragraph Mastery</h2>
+
+                <h3>Basic Essay Structure</h3>
+                <div class="formula">INTRODUCTION → BODY PARAGRAPHS (x2–3+) → CONCLUSION</div>
+
+                <h3>Thesis Statement Formula</h3>
+                <div class="box purple">
+                    <strong>Literary analysis thesis:</strong><br>
+                    <em>In <code>Title</code> by <code>Author</code>, the author uses <code>device 1</code> and <code>device 2</code> to show that <code>big idea/theme</code>.</em><br><br>
+                    <strong>Example:</strong><br>
+                    In <em>Of Mice and Men</em>, John Steinbeck uses symbolism and foreshadowing to show that the American Dream is often unreachable for ordinary people.
+                </div>
+
+                <h3>TEAL / TDEC Paragraph Structure</h3>
+                <div class="box blue">
+                    <ul>
+                        <li><strong>T – Topic Sentence:</strong> Your mini-claim for the paragraph.</li>
+                        <li><strong>E – Evidence:</strong> Quote, paraphrase, or summary from the text.</li>
+                        <li><strong>A – Analysis:</strong> Explain how/why it proves your point.</li>
+                        <li><strong>L – Link:</strong> Connect back to thesis or transition to next idea.</li>
+                    </ul>
+                </div>
+
+                <h3>Sample Analytical Paragraph</h3>
+                <div class="box green">
+                    <strong>Topic:</strong> How a character changes<br><br>
+                    <em>At the beginning of the novel, Jonas follows the rules without question, but his exposure to memory forces him to think independently. When he first receives the memory of war, he realizes that his community has been hiding pain from him and admits, "I didn't know there could be so much suffering" (Lowry 121). This moment reveals how protected and naive Jonas has been his entire life. By confronting the truth, he begins to question whether "sameness" is worth the cost of losing real emotions. Ultimately, this transformation shows that true maturity requires facing uncomfortable realities rather than living in ignorance.</em>
+                </div>
+
+                <h3>Introductions: Hook, Bridge, Thesis</h3>
+                <div class="grid">
+                    <div class="card">
+                        <div class="card-title">Hook Ideas</div>
+                        <div class="card-desc">
+                            • Short relevant quote<br>
+                            • Shocking fact/statistic<br>
+                            • Thought-provoking question<br>
+                            • Brief vivid scenario
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-title">Bridge</div>
+                        <div class="card-desc">
+                            • Introduce title & author<br>
+                            • Give 1–2 sentence summary<br>
+                            • Move from hook to thesis smoothly
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-title">Thesis</div>
+                        <div class="card-desc">
+                            • Clear, arguable claim<br>
+                            • Answers the prompt directly<br>
+                            • Lists main reasons/devices
+                        </div>
+                    </div>
+                </div>
+
+                <h3>Conclusions: Don’t Just Repeat</h3>
+                <div class="box yellow">
+                    <ul>
+                        <li>Restate your thesis in fresh words.</li>
+                        <li>Synthesize your main points (connect them together).</li>
+                        <li>Answer: So what? Why does this matter beyond the story?</li>
+                        <li>End with a final thought, lesson, or connection to real life.</li>
+                    </ul>
+                </div>
+
+                <h3>Powerful Transition Words</h3>
+                <table>
+                    <tr><th>Purpose</th><th>Examples</th></tr>
+                    <tr><td>Add ideas</td><td>also, moreover, in addition, furthermore, another, similarly</td></tr>
+                    <tr><td>Show contrast</td><td>however, on the other hand, although, yet, despite this, in contrast</td></tr>
+                    <tr><td>Show cause/effect</td><td>because, therefore, as a result, consequently, thus, so</td></tr>
+                    <tr><td>Show time/order</td><td>first, next, then, finally, later, meanwhile</td></tr>
+                    <tr><td>Conclude</td><td>in conclusion, ultimately, overall, in the end, therefore</td></tr>
+                </table>
+
+                <h3>Common Essay Mistakes</h3>
+                <div class="box red">
+                    • Using "<em>I think</em>" or "<em>In my opinion</em>" in formal writing – your thesis already is your opinion.<br>
+                    • Retelling the entire plot instead of analyzing key moments.<br>
+                    • Overusing long quotes instead of focusing on small, meaningful phrases.<br>
+                    • Mixing multiple ideas into one paragraph instead of one clear focus.<br>
+                    • Forgetting to connect analysis back to the thesis.
+                </div>
+            </div>
+        </div>
+
+        <!-- TAB 4: GRAMMAR -->
+        <div class="content" data-content="4">
+            <div class="section">
+                <h2>📝 Essential Grammar & Sentence Rules</h2>
+
+                <h3>Complete Sentences vs. Fragments</h3>
+                <div class="grid">
+                    <div class="card">
+                        <div class="card-title">Complete Sentence</div>
+                        <div class="card-desc">
+                            • Has a subject + verb<br>
+                            • Expresses a complete thought<br><br>
+                            <strong>Example:</strong> <br>
+                            <em>The students finished their essays before class.</em>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-title">Fragment</div>
+                        <div class="card-desc">
+                            • Missing subject or verb<br>
+                            • Or begins with a subordinating word (when, because, although) and doesn’t finish the idea<br><br>
+                            <strong>Fix:</strong> Attach it to a complete sentence or add the missing part.
+                        </div>
+                    </div>
+                </div>
+
+                <h3>Run-on Sentences & Fixes</h3>
+                <div class="box red">
+                    <strong>Run-on:</strong> <em>She loved reading she hated writing essays.</em><br><br>
+                    <strong>Fix with:</strong>
+                    <ul>
+                        <li>Period: <em>She loved reading. She hated writing essays.</em></li>
+                        <li>Comma + FANBOYS: <em>She loved reading, but she hated writing essays.</em></li>
+                        <li>Semicolon: <em>She loved reading; she hated writing essays.</em></li>
+                    </ul>
+                </div>
+
+                <h3>FANBOYS – Coordinating Conjunctions</h3>
+                <div class="box blue">
+                    <strong>For, And, Nor, But, Or, Yet, So</strong><br>
+                    Use a comma before FANBOYS when it joins two complete sentences.<br>
+                    <em>He wanted to go outside, but it was raining.</em>
+                </div>
+
+                <h3>Common Comma Rules</h3>
+                <ul>
+                    <li>After an introductory word/phrase: <em>After the game, we went home.</em></li>
+                    <li>In a series: <em>We bought apples, bread, and milk.</em></li>
+                    <li>Around nonessential information: <em>My brother, who is in college, loves math.</em></li>
+                    <li>Between city and state / day and year: <em>Boston, Massachusetts</em>; <em>June 3, 2025</em></li>
+                </ul>
+
+                <h3>Subject–Verb Agreement</h3>
+                <table>
+                    <tr><th>Subject</th><th>Correct Verb</th></tr>
+                    <tr><td>The class</td><td><em>is</em> reading the novel.</td></tr>
+                    <tr><td>The students</td><td><em>are</em> reading the novel.</td></tr>
+                    <tr><td>Neither of the answers</td><td><em>is</em> correct.</td></tr>
+                    <tr><td>Each of the boys</td><td><em>has</em> a book.</td></tr>
+                    <tr><td>My friends and I</td><td><em>are</em> going to the library.</td></tr>
+                </table>
+
+                <h3>Pronoun Clarity</h3>
+                <div class="box green">
+                    Avoid ambiguous pronouns like "it," "they," or "this" when it’s not clear what the word refers to.<br><br>
+                    <strong>Unclear:</strong> <em>When Mark talked to James, he was angry.</em><br>
+                    (Who was angry? Mark or James?)<br><br>
+                    <strong>Clear:</strong> <em>When Mark talked to James, Mark was angry.</em>
+                </div>
+
+                <h3>Commonly Confused Words</h3>
+                <table>
+                    <tr><th>Word</th><th>Use</th></tr>
+                    <tr><td>their / there / they're</td><td><em>their</em> = ownership; <em>there</em> = place; <em>they're</em> = they are</td></tr>
+                    <tr><td>your / you're</td><td><em>your</em> = ownership; <em>you're</em> = you are</td></tr>
+                    <tr><td>its / it's</td><td><em>its</em> = ownership; <em>it's</em> = it is</td></tr>
+                    <tr><td>then / than</td><td><em>then</em> = time; <em>than</em> = comparison</td></tr>
+                    <tr><td>affect / effect</td><td><em>affect</em> = verb (to influence); <em>effect</em> = noun (result)</td></tr>
+                </table>
+            </div>
+        </div>
+
+        <!-- TAB 5: VOCAB & STYLE -->
+        <div class="content" data-content="5">
+            <div class="section">
+                <h2>💡 Vocabulary, Diction & Style</h2>
+
+                <h3>Using Context Clues</h3>
+                <div class="box blue">
+                    <strong>Types of context clues:</strong>
+                    <ul>
+                        <li><strong>Definition:</strong> The word is explained.  
+                            <em>The arboretum, <u>a place where many trees are grown</u>, was beautiful.</em></li>
+                        <li><strong>Synonym:</strong> Similar word nearby.  
+                            <em>The task was arduous, or very difficult.</em></li>
+                        <li><strong>Antonym:</strong> Opposite word nearby.  
+                            <em>Unlike his gregarious brother, Sam was quiet.</em></li>
+                        <li><strong>Example:</strong> Examples help define the word.  
+                            <em>Celestial bodies, such as the sun and moon, filled the sky.</em></li>
+                    </ul>
+                </div>
+
+                <h3>Denotation vs. Connotation</h3>
+                <div class="grid">
+                    <div class="card">
+                        <div class="card-title">Denotation</div>
+                        <div class="card-desc">Dictionary definition of a word.</div>
+                        <div class="card-ex">"Home" = a place where one lives.</div>
+                    </div>
+                    <div class="card">
+                        <div class="card-title">Connotation</div>
+                        <div class="card-desc">Feelings/associations a word carries.</div>
+                        <div class="card-ex">"Home" = warmth, comfort, family.</div>
+                    </div>
+                </div>
+
+                <h3>Formal vs. Informal Diction</h3>
+                <div class="box purple">
+                    <strong>Informal (avoid in essays):</strong> kids, stuff, gonna, a lot, cool, things<br>
+                    <strong>Formal (use in academic writing):</strong> children, materials, going to, many/much, effective/interesting, items/details
+                </div>
+
+                <h3>Upgrading Weak Words</h3>
+                <table>
+                    <tr><th>Weak Word</th><th>Stronger Options</th></tr>
+                    <tr><td>said</td><td>argued, insisted, claimed, whispered, admitted, exclaimed</td></tr>
+                    <tr><td>good</td><td>effective, meaningful, powerful, impressive, beneficial</td></tr>
+                    <tr><td>bad</td><td>harmful, ineffective, damaging, problematic, unfair</td></tr>
+                    <tr><td>very happy</td><td>ecstatic, thrilled, delighted, overjoyed</td></tr>
+                    <tr><td>very sad</td><td>devastated, heartbroken, sorrowful, miserable</td></tr>
+                </table>
+
+                <h3>Sentence Variety</h3>
+                <div class="box green">
+                    <strong>Try mixing:</strong>
+                    <ul>
+                        <li>Short sentences → create emphasis or tension.</li>
+                        <li>Compound sentences → connect related ideas.</li>
+                        <li>Complex sentences → show relationships (because, although, when).</li>
+                        <li>Introductory phrases → <em>After the storm passed, the streets were silent.</em></li>
+                    </ul>
+                </div>
+
+                <h3>Tone Word Bank (Academic Favorites)</h3>
+                <div class="box yellow">
+                    <strong>Positive:</strong> hopeful, respectful, appreciative, optimistic, admiring<br>
+                    <strong>Negative:</strong> critical, bitter, cynical, disappointed, disapproving<br>
+                    <strong>Neutral/Analytical:</strong> objective, reflective, contemplative, serious, matter-of-fact
+                </div>
+            </div>
+        </div>
+
+        <!-- TAB 6: POETRY GUIDE -->
+        <div class="content" data-content="6">
+            <div class="section">
+                <h2>🎨 Poetry Analysis Guide</h2>
+
+                <h3>Common Poem Types</h3>
+                <div class="grid">
+                    <div class="card">
+                        <div class="card-title">Sonnet</div>
+                        <div class="card-desc">14-line poem, usually iambic pentameter; often about love or deep emotion.</div>
+                        <div class="card-ex">Shakespearean sonnet rhyme scheme: ABAB CDCD EFEF GG.</div>
+                    </div>
+                    <div class="card">
+                        <div class="card-title">Free Verse</div>
+                        <div class="card-desc">No regular rhyme or rhythm; sounds like natural speech.</div>
+                    </div>
+                    <div class="card">
+                        <div class="card-title">Haiku</div>
+                        <div class="card-desc">Traditional Japanese form; 3 lines (5–7–5 syllables) often about nature.</div>
+                    </div>
+                    <div class="card">
+                        <div class="card-title">Narrative Poem</div>
+                        <div class="card-desc">Tells a story with characters, setting, and plot.</div>
+                    </div>
+                    <div class="card">
+                        <div class="card-title">Lyric Poem</div>
+                        <div class="card-desc">Expresses a speaker’s thoughts or feelings; often musical.</div>
+                    </div>
+                </div>
+
+                <h3>TP-CASTT Strategy</h3>
+                <div class="box blue">
+                    <ul>
+                        <li><strong>T – Title:</strong> Predict what the poem might be about.</li>
+                        <li><strong>P – Paraphrase:</strong> Put each stanza into your own words.</li>
+                        <li><strong>C – Connotation:</strong> Look for figurative language, imagery, sound devices.</li>
+                        <li><strong>A – Attitude:</strong> Identify the speaker's tone.</li>
+                        <li><strong>S – Shifts:</strong> Notice changes in tone, setting, speaker, or time.</li>
+                        <li><strong>T – Title (again):</strong> Reinterpret title now that you’ve read the poem.</li>
+                        <li><strong>T – Theme:</strong> State the message about life or human nature.</li>
+                    </ul>
+                </div>
+
+                <h3>Imagery & Sensory Language</h3>
+                <div class="grid">
+                    <div class="card">
+                        <div class="card-title">Visual (Sight)</div>
+                        <div class="card-ex">"A host, of golden daffodils."</div>
+                    </div>
+                    <div class="card">
+                        <div class="card-title">Auditory (Sound)</div>
+                        <div class="card-ex">"The bells, bells, bells, bells."</div>
+                    </div>
+                    <div class="card">
+                        <div class="card-title">Tactile (Touch)</div>
+                        <div class="card-ex">"The rough bark scraped my hand."</div>
+                    </div>
+                    <div class="card">
+                        <div class="card-title">Gustatory (Taste)</div>
+                        <div class="card-ex">"The bittersweet chocolate melted on my tongue."</div>
+                    </div>
+                    <div class="card">
+                        <div class="card-title">Olfactory (Smell)</div>
+                        <div class="card-ex">"The sharp scent of pine filled the air."</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- TAB 7: READING SKILLS -->
+        <div class="content" data-content="7">
+            <div class="section">
+                <h2>🔍 Active Reading & Study Skills</h2>
+
+                <h3>Annotation Codes</h3>
+                <table>
+                    <tr><th>Symbol</th><th>Meaning</th></tr>
+                    <tr><td>*</td><td>Important idea / possible theme</td></tr>
+                    <tr><td>?</td><td>Question / confusing part</td></tr>
+                    <tr><td>!</td><td>Surprising / emotional moment</td></tr>
+                    <tr><td>♥</td><td>Favorite line / strong quote</td></tr>
+                    <tr><td>→</td><td>Connection (text-to-self, text-to-text, text-to-world)</td></tr>
+                </table>
+
+                <h3>Making Inferences</h3>
+                <div class="formula">WHAT THE TEXT SAYS + WHAT YOU KNOW = INFERENCE</div>
+                <div class="box green">
+                    <strong>Example:</strong><br>
+                    Text: "She slammed the door and threw her backpack on the floor."  
+                    Background knowledge: People often slam doors when angry.  
+                    <strong>Inference:</strong> She is probably frustrated or upset.
+                </div>
+
+                <h3>Turning Topics into Theme Statements</h3>
+                <div class="box purple">
+                    <strong>Topic → Theme Formula:</strong><br>
+                    <em>In <code>Title</code>, the author suggests that <code>topic</code> + <code>what about it?</code>.</em><br><br>
+                    <strong>Example:</strong><br>
+                    Topic: friendship<br>
+                    Theme: In <em>Of Mice and Men</em>, Steinbeck suggests that true friendship can be both a source of comfort and a source of painful sacrifice.
+                </div>
+
+                <h3>Types of Questions</h3>
+                <div class="grid">
+                    <div class="card">
+                        <div class="card-title">Right There</div>
+                        <div class="card-desc">Answer is directly in the text; often a single sentence.</div>
+                    </div>
+                    <div class="card">
+                        <div class="card-title">Think & Search</div>
+                        <div class="card-desc">Need to look in several places and combine information.</div>
+                    </div>
+                    <div class="card">
+                        <div class="card-title">Author & You</div>
+                        <div class="card-desc">Use text clues + your own knowledge to infer.</div>
+                    </div>
+                    <div class="card">
+                        <div class="card-title">On Your Own</div>
+                        <div class="card-desc">Based mostly on your experience or opinion, but still connected to the text.</div>
+                    </div>
+                </div>
+
+                <h3>Before, During, After Reading</h3>
+                <div class="box blue">
+                    <strong>Before:</strong> preview headings, predict, set a purpose.<br>
+                    <strong>During:</strong> annotate, question, visualize, make connections.<br>
+                    <strong>After:</strong> summarize, identify theme, reflect on characters and choices.
+                </div>
+
+                <h3>Quick Summary Frames</h3>
+                <div class="box yellow">
+                    • <strong>Somebody–Wanted–But–So–Then</strong><br>
+                    <em>Somebody</em> (who?) <em>wanted</em> (goal) <em>but</em> (problem) <em>so</em> (what they did) <em>then</em> (result).<br><br>
+                    • <strong>Somebody–Changed–Because</strong><br>
+                    Focus on how a character changes and why.
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Simple tab logic
+        const tabs = document.querySelectorAll('.tab');
+        const contents = document.querySelectorAll('.content');
+
+        function activateTab(index) {
+            tabs.forEach((tab, i) => {
+                tab.classList.toggle('active', i === index);
+            });
+            contents.forEach((content, i) => {
+                content.classList.toggle('active', i === index);
+            });
+        }
+
+        tabs.forEach((tab, index) => {
+            tab.addEventListener('click', () => activateTab(index));
+        });
+
+        // Set default active tab
+        activateTab(0);
+    </script>
+</body>
+</html>
